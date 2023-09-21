@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partial/header.ejs')%>
+  <body>
+    <%- include('../partial/navbar.ejs')%>
+    <div class="details content">
+      <h2><%= blog.title %></h2>
+      <div class="content">
+        <p><%= blog.body %></p>
+      </div>
+      <a class="delete" data-doc="<%= blog._id%>">
+        <img src="/trashcan.svg" alt="delete icon" />
+      </a>
+    </div>
+    <%- include('../partial/footer.ejs')%>
+    <script>
+      const trashIcon = document.querySelector("a.delete");
+      trashIcon.addEventListener("click", (e) => {
+        const endPoint = `/blogs/${trashIcon.dataset.doc}`;
+        fetch(endPoint, {
+          method: "DELETE",
+        })
+          .then((response) => response.json())
+          .then((data) => (window.location.href = data.redirect))
+          .catch((error) =>
+            console.log(error, "Error occurred while deleting blog")
+          );
+      });
+    </script>
+  </body>
+</html>

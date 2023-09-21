@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  font-family: "Noto serif", serif;
+}
+p,
+h1,
+h2,
+h3,
+a,
+ul {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #222;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+nav li {
+  list-style-type: none;
+  margin-left: 20px;
+}
+nav li:hover {
+  transition: all 1s ease-in;
+  text-decoration: underline;
+}
+nav h1 {
+  font-size: 3em;
+}
+nav p,
+nav a {
+  color: #777;
+  font-weight: 700;
+}
+footer {
+  color: #777;
+  text-align: center;
+  margin: 80px auto 20px;
+}
+h2 {
+  margin-bottom: 40px;
+}
+h3 {
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+.about-body{
+  margin: 2rem 0;
+}
+.details{
+  position: relative;
+}
+.delete{
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  padding: 6px 8px;
+}
+.delete:hover{
+  cursor: pointer;
+  box-shadow: 5px rgba(250, 1, 1, 0.5);
+  background-color: crimson;
+  transition: all 0.5 ease-in-out;
+}
+.content {
+  margin: 1rem 0;
+  margin-left: 20px;
+}
+.blog-body{
+  margin: 0.5rem 0;
+  border-radius: 1rem;
+}
+.blog-body:hover{
+  margin: 0.5rem 0;
+  transition: all 1s ease-in-out;
+  background-color: #EAEAEA;
+}
+.blog-body a{
+  display: block;
+  margin: 40px 0;
+  padding-left: 30px;
+  border-left: 6px solid crimson;
+}
+.blog-body h3:hover{
+  color: crimson;
+}
+.create-blog form {
+  max-width: 400px;
+  margin: 3rem 0;
+}
+.create-blog input,
+.create-blog textarea {
+  display: block;
+  width: 400px;
+  padding: 8px;
+  margin: 10px 5px;
+  border-color: #AEAEAE;
+  border-radius: 5px;
+  font-size: medium;
+  font-family: "Noto serif", serif;
+  font-weight: 300;
+}
+.submit-button {
+  width: 120px;
+  margin: 20px 0;
+  padding: 10px;
+  color: #222;
+  background-color: white;
+  border-radius: 8px;
+  border-color: #777;
+  font-size: large;
+  font-family: "Noto serif", serif;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.submit-button:hover {
+  background-color: crimson;
+  color: white;
+  transition: all ease-in-out 0.5s;
+}
+
+.not-found{
+  height: 50vh;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
